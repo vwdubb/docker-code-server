@@ -30,6 +30,7 @@ RUN \
     gradle \
     vim \
     zsh \
+    skopeo \
     sudo && \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
