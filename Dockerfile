@@ -46,4 +46,4 @@ RUN \
 COPY /root /
 
 # ports and volumes
-EXPOSE 8443
+EXPOSE 9449

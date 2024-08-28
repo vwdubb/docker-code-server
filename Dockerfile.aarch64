@@ -55,4 +55,4 @@ RUN usermod -s /bin/zsh abc
 COPY /root /
 
 # ports and volumes
-EXPOSE 8443
+EXPOSE 9449

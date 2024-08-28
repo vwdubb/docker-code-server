@@ -19,7 +19,7 @@ param_volumes:
   - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Contains all relevant configuration files."}
 param_usage_include_ports: true
 param_ports:
-  - {external_port: "8443", internal_port: "8443", port_desc: "web gui"}
+  - {external_port: "9449", internal_port: "9449", port_desc: "web gui"}
 # optional container parameters
 opt_param_usage_include_env: true
 opt_param_env_vars:
@@ -33,7 +33,7 @@ opt_param_env_vars:
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
-  Access the webui at `http://<your-ip>:8443`.
+  Access the webui at `http://<your-ip>:9449`.
   For github integration, drop your ssh key in to `/config/.ssh`.
   Then open a terminal from the top menu and set your github username and email via the following commands
 

@@ -65,7 +65,7 @@ The architectures supported by this image are:
 
 ## Application Setup
 
-Access the webui at `http://<your-ip>:8443`.
+Access the webui at `http://<your-ip>:9449`.
 For github integration, drop your ssh key in to `/config/.ssh`.
 Then open a terminal from the top menu and set your github username and email via the following commands
 
@@ -103,7 +103,7 @@ services:
     volumes:
       - /path/to/code-server/config:/config
     ports:
-      - 8443:8443
+      - 9449:9449
     restart: unless-stopped
 ```
 
@@ -121,7 +121,7 @@ docker run -d \
   -e SUDO_PASSWORD_HASH= `#optional` \
   -e PROXY_DOMAIN=code-server.my.domain `#optional` \
   -e DEFAULT_WORKSPACE=/config/workspace `#optional` \
-  -p 8443:8443 \
+  -p 9449:9449 \
   -v /path/to/code-server/config:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/code-server:latest
@@ -133,7 +133,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 
 | Parameter | Function |
 | :----: | --- |
-| `-p 8443` | web gui |
+| `-p 9449` | web gui |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
