@@ -18,9 +18,20 @@ RUN \
   apt-get update && \
   apt-get install -y \
     git \
+    git-lfs \
     libatomic1 \
     nano \
     net-tools \
+    openjdk-8-jdk \
+    openjdk-11-jdk \
+    openjdk-17-jdk \
+    openjdk-21-jdk \
+    maven \
+    gradle \
+    vim \
+    zsh \
+    skopeo \
+    fzf \
     sudo && \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
@@ -41,6 +52,10 @@ RUN \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
+
+RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+
+RUN usermod -s /bin/zsh abc
 
 # add local files
 COPY /root /
