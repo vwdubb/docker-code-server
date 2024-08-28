@@ -27,6 +27,7 @@ RUN \
     openjdk-21-jdk \
     maven \
     gradle \
+    vim \
     zsh \
     sudo && \
   echo "**** install code-server ****" && \
